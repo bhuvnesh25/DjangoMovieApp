@@ -5,10 +5,11 @@
     <title>Movie app</title>
 </head>
 <body>
+<h1>Actors</h1>
  <ul>
      {% for a in all_movies %}
      <li>
-         <a href="/movie1/{{a.id}}/">{{a.actor}}</a>
+         <a href="{% url 'movie1:detail' a.id  %}">{{a.actor}}</a>
      </li>
      {% endfor %}
  </ul>
